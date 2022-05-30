@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/NetBeans/VSTUP/src/entrant/Entrant.fxml</file>
+            <file>file:/D:/NetBeans/VSTUP/src/auxiliary/SQL.java</file>
+            <file>file:/D:/NetBeans/VSTUP/src/worker/DetailSpecialty.java</file>
+            <file>file:/D:/NetBeans/VSTUP/src/admin/Faculty.java</file>
+            <file>file:/D:/NetBeans/VSTUP/src/auxiliary/Email.java</file>
+            <file>file:/D:/NetBeans/VSTUP/src/admin/Specialty.java</file>
+            <file>file:/D:/NetBeans/VSTUP/src/entrant/Specialty.java</file>
+            <file>file:/D:/NetBeans/VSTUP/src/vstup/FXMLDocument.fxml</file>
+            <file>file:/D:/NetBeans/VSTUP/src/admin/UsersTable.java</file>
+            <file>file:/D:/NetBeans/VSTUP/src/auxiliary/Auxiliary.java</file>
+            <file>file:/D:/NetBeans/VSTUP/src/admin/Admin.fxml</file>
+            <file>file:/D:/NetBeans/VSTUP/src/admin/AdminController.java</file>
+            <file>file:/D:/NetBeans/VSTUP/src/worker/Worker.fxml</file>
+            <file>file:/D:/NetBeans/VSTUP/src/auxiliary/MaskField.java</file>
+            <file>file:/D:/NetBeans/VSTUP/src/worker/WorkerController.java</file>
+            <file>file:/D:/NetBeans/VSTUP/src/admin/Document.java</file>
+            <file>file:/D:/NetBeans/VSTUP/src/worker/Request.java</file>
+            <file>file:/D:/NetBeans/VSTUP/src/entrant/EntrantController.java</file>
+            <file>file:/D:/NetBeans/VSTUP/src/admin/University.java</file>
+            <file>file:/D:/NetBeans/VSTUP/src/vstup/FXMLDocumentController.java</file>
+            <file>file:/D:/NetBeans/VSTUP/src/auxiliary/User.java</file>
+            <file>file:/D:/NetBeans/VSTUP/src/entrant/ZNO.java</file>
+            <file>file:/D:/NetBeans/VSTUP/src/admin/UniversityTable.java</file>
+            <file>file:/D:/NetBeans/VSTUP/src/vstup/VSTUP.java</file>
+            <file>file:/D:/NetBeans/VSTUP/src/admin/Education.java</file>
+        </group>
+    </open-files>
+</project-private>

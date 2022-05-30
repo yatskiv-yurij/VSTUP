@@ -1,0 +1,4 @@
+id:5
+login:maxim@gmail.com
+pass:16d49f4863b21430d617e6259375a00397600124964b9c691b827dde92811451
+role:admin

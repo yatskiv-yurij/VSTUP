@@ -1,0 +1,374 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27 бер. 2022, 12:28:58
+    Author     : Admin
+*/
+
+
+#login_grid, #pane_number, #pane_login, #pane_new_pass{
+    -fx-background-color: #fff;
+}
+
+#choice{
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 36px;
+    -fx-font-style: italic;   
+}
+
+#user_login, #user_pass, #user_pass_repeat, #forgot_login, #user_new_pass, #user_new_pass2, #user_pass_open, #user_pass_repeat_open, #user_new_pass_open, #user_new_pass2_open{
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 16px;
+    -fx-font-style: italic; 
+}
+
+#forgot_pass, #registration{
+    -fx-background-color: transparent;
+    -fx-text-fill: #316fda;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 14px;
+    -fx-font-style: italic; 
+    -fx-cursor:hand;
+}
+
+#remember_me{
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 14px;
+    -fx-font-style: italic;
+    -fx-cursor:hand;
+}
+
+#enter, #back, #back2,#back3, #next_number, #change_pass, #back4{
+    -fx-background-color: #316fda;
+    -fx-text-fill: #fff;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 18px;
+    -fx-font-style: italic; 
+    -fx-cursor: hand;
+}
+
+#exception, #label_pass_exception{
+    -fx-text-fill: red;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 14px;
+    -fx-font-style: italic;
+}
+
+#label_login, #label_forgot, #label_new_pass{
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 20px;
+    -fx-font-style: italic;
+}
+
+#number_one, #number_two, #number_three{
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 40px;
+    -fx-font-style: italic;
+    -fx-background-color: #fff;
+    -fx-text-fill: #316fda;
+    -fx-border-color: #cecece;
+    -fx-border-radius: 20px;
+    -fx-cursor: hand;
+}
+
+#number_one:hover, #number_two:hover, #number_three:hover{
+    -fx-background-color: #cecece;
+    -fx-background-radius: 20px;
+}
+
+#open_pass1, #open_pass2, #open_pass3, #open_pass4{
+    -fx-background-color: #fff;
+    -fx-background-image: url("../images/open-pass.png");
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-cursor: hand;
+}
+
+#user_document{
+    -fx-background-color: #fff;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 16px;
+    -fx-font-style: italic; 
+    -fx-border-color: gray;
+    -fx-border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+/*ADMIN PANEL*/
+#user_tab, #dvnz_tab, #faculty_tab, #special_tab, #analytic_tab,#profile_tab, #search_tab, #request_tab,#education_tab, #logout,#specialty_tab, #confirm_tab{
+    -fx-background-color: transparent;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 18px;
+    -fx-font-style: italic; 
+    -fx-padding: 0 0 0 50px;
+    -fx-cursor: hand;
+}
+
+#user_tab:hover, #dvnz_tab:hover, #faculty_tab:hover, #special_tab:hover, #analytic_tab:hover, #logout:hover, #profile_tab:hover,#education_tab:hover, #request_tab:hover, #search_tab:hover,#specialty_tab:hover, #confirm_tab:hover{
+    -fx-background-color: rgba(0,0,0,.05) !important;
+}
+
+.active{
+    -fx-background-color: rgba(0,0,0,.15) !important;
+}
+
+#menu_open{
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+.col{
+    -fx-border-color: #000;
+    -fx-border-width: 0.2;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 16px;
+    -fx-font-style: italic;
+    -fx-text-alignment: center;
+    -fx-alignment: CENTER;
+}
+
+#edit{
+    -fx-background-color: transparent;
+}
+
+#last_name, #name{
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 16px;
+    -fx-font-style: italic;
+    -fx-text-fill: red;
+}
+
+.edit{
+    -fx-background-color: #fff;
+    -fx-background-image: url("../images/edit.png");
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-cursor: hand;
+}
+
+.review{
+    -fx-background-color: #fff;
+    -fx-background-image: url("../images/open-pass.png");
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-cursor: hand;
+}
+
+#delete_user, #university_delete, #university_change_delete, #faculty_delete, #specialty_delete, #delete_education, 
+#delete_document, #delete_doc, #delete_detail, #delete_exams, #delete_exam1, #delete_exam2, #delete_exam3, #reject{
+    -fx-background-color: #FF4C4C;
+    -fx-text-fill: #fff;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 18px;
+    -fx-font-style: italic; 
+    -fx-cursor: hand;
+}
+
+#add_user, #university_add, #add_faculty, #add_specialty, #faculty_add_btn, #faculty_save, #specialty_add_btn,#add_education, #add_document, #add_doc,
+#save_education, #specialty_save, #add_detail, #save_exams, #add_exam1, #add_exam2, #add_exam3, #request_btn, #confirm, #back5,#back6{
+    -fx-background-color: #316fda;
+    -fx-text-fill: #fff;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 18px;
+    -fx-font-style: italic; 
+    -fx-cursor: hand;
+}
+
+#add_user_panel, #change_university_panel, #change_faculty_panel, #entrant_add_data_panel, #add_zno_panel, #change_education_panel, #change_specialty_panel, #add_detail_panel, #add_exams_panel{
+    -fx-background-color: linear-gradient(to bottom, rgba(39,28,226,1) 0%, rgba(255,243,0,1) 100%);
+}
+
+#last_name_add, #name_add, #login_add, #university_change, #specialty_all, #mandatory_exams, #choice_exams, #entrance_exams{
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 16px;
+    -fx-font-style: italic; 
+}
+
+#role_add, #dvnz_add, #faculty_add, #university_faculty_add, #university_specialty_add, #change_faculty, #change_specialty_code, #education_name, #education_document, #education_all_doc, #change_specialty,
+#detail_forma, #detail_offer, #detail_document,#detail_course, #detail_exams, #detail_start, #detail_end, #detail_price, #detail_contract, #detail_amount, #detail_education,
+#search_education, #search_specialty, #search_univer, #search_forma, #search_course, #search_univer_cb,#search_specialty_cb, #entrance_combo, #choice_combo, #mandatory_combo{
+    -fx-background-color: #fff;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 16px;
+    -fx-font-style: italic; 
+}
+
+#new_user, #university_change_save, #university_change_add, #add_exams, #detail_save, #search, #look_user, #export{
+    -fx-background-color: #316fda;
+    -fx-text-fill: #fff;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 18px;
+    -fx-font-style: italic; 
+    -fx-cursor: hand;
+}
+#add_exams{
+    -fx-background-color: yellow;
+    -fx-text-fill: #000;
+}
+
+#label_login_exception, #add_user_result, university_change_result, #university_change_result, #change_faculty_result, #entrant_result, #zno_result, #education_result, #change_specialty_result, #detail_result, #search_result, #apply_result, #exams_result{
+    -fx-text-fill: #fff;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 14px;
+    -fx-font-style: italic;
+}
+
+#label_login_exception,#search_result, #apply_result{
+    -fx-text-fill: #000;
+}
+
+#look_user{
+    -fx-background-color: yellow;
+    -fx-text-fill: #000;
+}
+
+#export{
+    -fx-background-color: #32CD32;
+}
+
+
+/* ENTRANT PANEL*/
+
+#last_name, #name, #sex, #phone, #birthday, #series, #number,#rating, #last_name1, #name1{
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 16px;
+    -fx-font-style: italic;
+    -fx-text-fill: #000;
+}
+
+#delete_zno{
+    -fx-background-color: #FF4C4C;
+    -fx-text-fill: #fff;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 18px;
+    -fx-font-style: italic; 
+    -fx-cursor: hand;
+}
+
+#add_zno, #edit_user_data{
+    -fx-background-color: #316fda;
+    -fx-text-fill: #fff;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 18px;
+    -fx-font-style: italic; 
+    -fx-cursor: hand;
+}
+
+#add_img_user{
+    -fx-background-color: #000;
+    -fx-background-image: url("../images/change.png");
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-cursor: hand;
+}
+
+#add_file{
+    -fx-background-color: #316fda;
+    -fx-background-image: url("../images/download.png");
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-cursor: hand;
+}
+
+#delete_file{
+    -fx-background-color: #316fda;
+    -fx-background-image: url("../images/delete.png");
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-cursor: hand;
+}
+
+#document_file{
+    -fx-background-color: transparent;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 18px;
+    -fx-font-style: italic; 
+    -fx-cursor: hand;
+}
+#documnt_lbl{
+    -fx-text-fill: #fff;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 16px;
+    -fx-font-style: italic;
+}
+
+#entrant_last_name, #entrant_name, #entrant_data_birthday, #entrant_sex, #entrant_phone, #entrant_series_document, #entrant_number_document, #entrant_bal,
+#year_zno, #certificate_zno, #subject_zno, #pincode_zno, #rating_zno{
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 16px;
+    -fx-font-style: italic;
+    -fx-background-color: #fff;
+}
+
+#back_btn, #continue_btn, #save_zno, .look, #apply{
+    -fx-background-color: #316fda;
+    -fx-text-fill: #fff;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 18px;
+    -fx-font-style: italic; 
+    -fx-cursor: hand;
+}
+
+#last_name_data, #name_data, #sex_data, #birthday_data, #phone_data, #series_data, #number_data, #rating_data{
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 18px;
+    -fx-font-style: italic;
+    -fx-padding: 0 0 0 10px;
+    -fx-text-fill: green;
+}
+
+.item_result{
+    -fx-background-color: yellow;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+}
+
+
+.result_data{
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 19px;
+    -fx-font-style: italic;
+    -fx-text-fill: #000;
+}
+
+
+/*Worker panel*/
+
+#review_specialty{
+    -fx-background-color: yellow;
+    -fx-text-fill: #000;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 18px;
+    -fx-font-style: italic; 
+    -fx-cursor: hand;
+}
+
+.info{
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 19px;
+    -fx-font-style: italic;
+    -fx-text-fill: #000;
+}
+
+#exams, #exams .scroll-pane, #exams .scroll-pane .viewport, #exams .scroll-pane .content{
+    -fx-background-color: transparent;
+}
+
+
+
+

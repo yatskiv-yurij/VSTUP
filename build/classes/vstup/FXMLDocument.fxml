@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" fx:id="Pane" prefHeight="420.0" prefWidth="628.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vstup.FXMLDocumentController">
+   <children>
+      <GridPane fx:id="login_grid" alignment="CENTER" prefHeight="420.0" prefWidth="628.0" stylesheets="@../style/style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="124.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="494.0" minWidth="10.0" prefWidth="372.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="203.0" minWidth="10.0" prefWidth="126.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="135.0" minHeight="40.0" prefHeight="43.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="314.0" minHeight="35.0" prefHeight="52.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="345.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="345.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="20.0" minHeight="15.0" prefHeight="15.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="345.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="20.0" minHeight="15.0" prefHeight="15.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="46.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="20.0" minHeight="15.0" prefHeight="15.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="345.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="345.0" minHeight="15.0" prefHeight="15.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="345.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="345.0" minHeight="15.0" prefHeight="15.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="345.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="345.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="345.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="345.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="exception" alignment="CENTER_RIGHT" focusTraversable="true" text="help" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Label fx:id="choice" alignment="CENTER_RIGHT" focusTraversable="true" text="Вхід" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="user_login" focusTraversable="false" prefHeight="25.0" prefWidth="361.0" promptText="Логін" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <CheckBox fx:id="remember_me" mnemonicParsing="false" text="Запам’ятати мене" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+            <Button fx:id="enter" alignment="CENTER" mnemonicParsing="false" onAction="#enter_click" prefHeight="25.0" prefWidth="116.0" text="Ввійти" GridPane.columnIndex="1" GridPane.rowIndex="15" />
+            <AnchorPane prefHeight="27.0" prefWidth="374.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
+               <children>
+                  <Button fx:id="forgot_pass" layoutY="1.0" mnemonicParsing="false" onAction="#forgot_click" text="Забули пароль?" />
+                  <Button fx:id="registration" contentDisplay="RIGHT" layoutX="267.0" layoutY="1.0" mnemonicParsing="false" onAction="#registration_click" text="Зареєструватись" AnchorPane.rightAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="panel_pass" prefHeight="27.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <children>
+                  <PasswordField fx:id="user_pass" layoutY="1.0" prefHeight="25.0" prefWidth="314.0" promptText="Пароль" />
+                  <TextField fx:id="user_pass_open" layoutY="1.0" prefHeight="25.0" prefWidth="314.0" promptText="Пароль" />
+                  <Button fx:id="open_pass1" layoutX="340.0" layoutY="1.0" mnemonicParsing="false" onAction="#open_pass1_click" prefHeight="25.0" prefWidth="34.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="panel_pass_repeat" prefHeight="27.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <children>
+                  <PasswordField fx:id="user_pass_repeat" layoutY="2.0" prefHeight="25.0" prefWidth="314.0" promptText="Повторіть пароль" />
+                  <TextField fx:id="user_pass_repeat_open" layoutY="2.0" prefHeight="25.0" prefWidth="314.0" promptText="Повторіть пароль" />
+                  <Button fx:id="open_pass2" layoutX="342.0" layoutY="1.0" mnemonicParsing="false" onAction="#open_pass2_click" prefHeight="25.0" prefWidth="34.0" />
+               </children>
+            </AnchorPane>
+            <ComboBox fx:id="user_document" prefHeight="38.0" prefWidth="463.0" promptText="Вступ на основі" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+         </children>
+      </GridPane>
+     
+      <GridPane fx:id="pane_login" prefHeight="420.0" prefWidth="628.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="226.0" minWidth="10.0" prefWidth="166.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="287.0" minWidth="10.0" prefWidth="287.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="175.0" minWidth="10.0" prefWidth="166.0" />
+        </columnConstraints>
+        <rowConstraints>
+           <RowConstraints maxHeight="151.0" minHeight="10.0" prefHeight="119.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="90.0" minHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="120.0" minHeight="9.0" prefHeight="54.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="146.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="164.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="85.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="104.0" minHeight="10.0" prefHeight="19.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="85.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="104.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="label_login_exception" text="" GridPane.columnSpan="3" GridPane.rowIndex="0" />
+            <Label fx:id="label_login" text="Введіть свою пошту" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+            <TextField fx:id="forgot_login" GridPane.columnIndex="1" GridPane.rowIndex="3" promptText="Логін"/>
+            <Button fx:id="next_number" mnemonicParsing="false" prefHeight="25.0" prefWidth="104.0" text="Далі" onAction="#next_number_click" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Button fx:id="back2" mnemonicParsing="false" prefHeight="25.0" prefWidth="104.0" text="Назад" onAction="#back_click" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+         </children>
+      </GridPane>
+      
+      <GridPane fx:id="pane_number" alignment="CENTER" layoutX="1.0" prefHeight="420.0" prefWidth="628.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="103.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="108.0" minWidth="10.0" prefWidth="103.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="84.0" minWidth="10.0" prefWidth="40.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="115.0" minWidth="10.0" prefWidth="103.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="84.0" minWidth="10.0" prefWidth="40.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="103.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="103.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="138.0" minHeight="10.0" prefHeight="108.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="82.0" minHeight="0.0" prefHeight="31.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="214.0" minHeight="2.0" prefHeight="42.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="235.0" minHeight="10.0" prefHeight="78.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="227.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="235.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="227.0" minHeight="10.0" prefHeight="97.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="label_forgot" alignment="CENTER" prefHeight="17.0" prefWidth="703.0" text="Виберіть цифру яка була відправлена вам на пошту" GridPane.columnSpan="7" GridPane.rowIndex="1" />
+            <Button fx:id="number_one" mnemonicParsing="false" prefHeight="79.0" prefWidth="118.0" onAction="#number_click" text="80" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button fx:id="number_two" mnemonicParsing="false" prefHeight="75.0" prefWidth="111.0" onAction="#number_click" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Button fx:id="number_three" mnemonicParsing="false" prefHeight="78.0" prefWidth="114.0" onAction="#number_click" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <Button fx:id="back" mnemonicParsing="false" prefHeight="25.0" prefWidth="85.0" text="Назад" onAction="#back_click" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+          
+      <GridPane fx:id="pane_new_pass" prefHeight="420.0" prefWidth="628.0">
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="226.0" minWidth="10.0" prefWidth="155.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="314.0" minWidth="10.0" prefWidth="314.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="175.0" minWidth="10.0" prefWidth="157.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="151.0" minHeight="10.0" prefHeight="101.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="90.0" minHeight="0.0" prefHeight="24.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="120.0" minHeight="9.0" prefHeight="42.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="146.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="164.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="85.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="104.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="85.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="104.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="85.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="104.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="label_new_pass" text="Введіть новий пароль" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+            <Button fx:id="change_pass" mnemonicParsing="false" onAction="#change_pass_click" prefHeight="25.0" prefWidth="155.0" text="Змінити пароль" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Button fx:id="back3" mnemonicParsing="false" onAction="#back_click" prefHeight="25.0" prefWidth="104.0" text="Назад" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Label fx:id="label_pass_exception" GridPane.columnIndex="1" />
+            <AnchorPane fx:id="panel_new_pass" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <PasswordField fx:id="user_new_pass" layoutY="2.0" prefHeight="25.0" prefWidth="250.0" promptText="Пароль" />
+                  <TextField fx:id="user_new_pass_open" layoutY="2.0" prefHeight="25.0" prefWidth="250.0" promptText="Пароль" />
+                  <Button fx:id="open_pass3" layoutX="298.0" layoutY="1.0" mnemonicParsing="false" onAction="#open_pass3_click" prefHeight="25.0" prefWidth="34.0"/>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="panel_new_pass_repeat" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <children>
+                  <PasswordField fx:id="user_new_pass2" layoutY="2.0" prefHeight="25.0" prefWidth="250.0" promptText="Повторіть пароль" />
+                  <TextField fx:id="user_new_pass2_open" layoutY="2.0" prefHeight="25.0" prefWidth="250.0" promptText="Повторіть пароль" />
+                  <Button fx:id="open_pass4" layoutX="300.0" layoutY="2.0" mnemonicParsing="false" onAction="#open_pass4_click" prefHeight="25.0" prefWidth="34.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane> 
+   </children>
+</AnchorPane>

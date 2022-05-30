@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+
+<AnchorPane id="AnchorPane" minHeight="500.0" minWidth="1010.0" prefHeight="500.0" prefWidth="1010.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="worker.WorkerController">
+   <children>
+      <GridPane fx:id="add_exams_panel" prefHeight="500.0" prefWidth="1010.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="0.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="50.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="50.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="0.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="15.0" minHeight="15.0" prefHeight="15.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="15.0" minHeight="15.0" prefHeight="15.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="exams_result" prefHeight="17.0" prefWidth="924.0" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="1" />
+            <ComboBox fx:id="mandatory_combo" prefHeight="25.0" prefWidth="254.0" promptText="Обов’язкові іспити" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ComboBox fx:id="choice_combo" prefHeight="25.0" prefWidth="289.0" promptText="Іспити на вибір" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <TextArea fx:id="mandatory_exams" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.rowSpan="2" />
+            <TextArea fx:id="choice_exams" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="5" GridPane.rowSpan="2" />
+            <ComboBox fx:id="entrance_combo" prefHeight="25.0" prefWidth="310.0" promptText="Вступні іспити" GridPane.columnIndex="3" GridPane.rowIndex="10" />
+            <TextArea fx:id="entrance_exams" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="12" GridPane.rowSpan="2" />
+            <Button fx:id="back4" mnemonicParsing="false" onAction="#back4_click" text="Назад" GridPane.columnIndex="1" GridPane.rowIndex="17" />
+            <Button fx:id="save_exams" mnemonicParsing="false" onAction="#save_exams_click" text="Зберегти" GridPane.columnIndex="5" GridPane.rowIndex="17" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <children>
+                  <Button fx:id="delete_exam1" layoutY="2.0" mnemonicParsing="false" onAction="#delete_exams1_click" text="Видалити" AnchorPane.leftAnchor="0.0" />
+                  <Button fx:id="add_exam1" layoutX="184.0" layoutY="2.0" mnemonicParsing="false" onAction="#add_exams1_click" text="Додати" AnchorPane.rightAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="8">
+               <children>
+                  <Button fx:id="delete_exam2" layoutY="2.0" mnemonicParsing="false" onAction="#delete_exams2_click" text="Видалити" AnchorPane.leftAnchor="0.0" />
+                  <Button fx:id="add_exam2" layoutX="184.0" layoutY="2.0" mnemonicParsing="false" onAction="#add_exams2_click" text="Додати" AnchorPane.rightAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="15">
+               <children>
+                  <Button fx:id="delete_exam3" layoutY="2.0" mnemonicParsing="false" onAction="#delete_exams3_click" text="Видалити" AnchorPane.leftAnchor="0.0" />
+                  <Button fx:id="add_exam3" layoutX="184.0" layoutY="2.0" mnemonicParsing="false" onAction="#add_exams3_click" text="Додати" AnchorPane.rightAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+      <AnchorPane fx:id="add_detail_panel" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <GridPane layoutX="85.0" layoutY="27.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="8.0" prefWidth="200.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="360.0" minWidth="10.0" prefWidth="350.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="350.0" minWidth="10.0" prefWidth="350.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                
+              </rowConstraints>
+               <children>
+                  <Label fx:id="detail_result" alignment="CENTER" prefHeight="17.0" prefWidth="687.0" GridPane.columnIndex="1" GridPane.columnSpan="3" />
+                  <ComboBox fx:id="detail_forma" prefHeight="25.0" prefWidth="318.0" promptText="Форма навчання" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <ComboBox fx:id="detail_offer" prefHeight="25.0" prefWidth="405.0" promptText="Вид пропозиції" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <ComboBox fx:id="detail_document" prefHeight="25.0" prefWidth="418.0" promptText="Вступ на основі" visibleRowCount="5" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                  <ComboBox fx:id="detail_course" prefHeight="25.0" prefWidth="336.0" promptText="Курс зарахування" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                  <DatePicker fx:id="detail_start" prefHeight="25.0" prefWidth="370.0" promptText="Початок навчання" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                  <DatePicker fx:id="detail_end" prefHeight="25.0" prefWidth="492.0" promptText="Кінець навчання" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+                  <TextField fx:id="detail_amount" promptText="Ліцензійний обсяг" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <TextField fx:id="detail_contract" promptText="Обсяг на контракт" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                  <TextField fx:id="detail_price" promptText="Ціна" GridPane.columnIndex="3" GridPane.rowIndex="10" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="14" />
+                  <ComboBox fx:id="detail_education" prefHeight="25.0" prefWidth="370.0" promptText="Освітній рівень" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button fx:id="detail_save" mnemonicParsing="false" onAction="#detail_save_click" text="Зберегти" GridPane.columnIndex="3" GridPane.rowIndex="13" />
+                  <Button fx:id="back3" mnemonicParsing="false" onAction="#back3_click" text="Назад" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="change_specialty_panel" layoutX="10.0" layoutY="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <GridPane fx:id="specialty_grid" layoutY="6.0" prefHeight="500.0" prefWidth="1010.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label fx:id="change_specialty_result" alignment="CENTER" prefHeight="17.0" prefWidth="396.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <AnchorPane prefHeight="30.0" prefWidth="315.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <children>
+                        <Button fx:id="back" layoutX="94.0" layoutY="2.0" mnemonicParsing="false" onAction="#back_click" text="Назад" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Button fx:id="specialty_save" layoutX="189.0" layoutY="2.0" mnemonicParsing="false" onAction="#specialty_save_click" text="Зберегти" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <TextField fx:id="change_specialty_code" promptText="Код спеціальності" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <TextField fx:id="change_specialty" promptText="Назва спеціальності" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="worker_panel" layoutX="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+           <children>
+               <AnchorPane fx:id="panel_tabs" layoutX="200.0" prefHeight="500.0" prefWidth="572.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <effect>
+                       <DropShadow />
+                    </effect>
+                    <children>
+                  <AnchorPane fx:id="tab3" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: f49f0a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TableView fx:id="specialty_detail" layoutX="14.0" layoutY="21.0" prefHeight="380.0" prefWidth="782.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="98.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="21.0">
+                          <columns>
+                                <TableColumn fx:id="detail_col1" prefWidth="75.0" styleClass="col" text="Освітній рівень" />
+                                <TableColumn fx:id="detail_col2" prefWidth="75.0" styleClass="col" text="Форма навчання" />
+                                <TableColumn fx:id="detail_col3" prefWidth="75.0" styleClass="col" text="Вид пропозиції" />
+                                <TableColumn fx:id="detail_col4" prefWidth="75.0" styleClass="col" text="Вступ на основі" />
+                                <TableColumn fx:id="detail_col5" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" styleClass="col" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <GridPane layoutX="15.0" layoutY="428.0" prefHeight="40.0" prefWidth="780.0" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                          <columnConstraints>
+                            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button fx:id="add_detail" mnemonicParsing="false" onAction="#add_detail_click" text="Додати" GridPane.columnIndex="3" />
+                              <Button fx:id="delete_detail" mnemonicParsing="false" onAction="#delete_detail_click" text="Видалити" GridPane.columnIndex="1" />
+                              <Button fx:id="back2" mnemonicParsing="false" onAction="#back2_click" text="Назад" />
+                              <Button fx:id="add_exams" mnemonicParsing="false" onAction="#add_exams_click" text="Іспити" GridPane.columnIndex="2" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+                        <AnchorPane fx:id="tab2" layoutX="10.0" prefHeight="510.0" prefWidth="573.0" style="-fx-background-color: #D4FCC3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TableView fx:id="specialty_request" prefHeight="380.0" prefWidth="782.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="98.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="21.0">
+                           <columns>
+                              <TableColumn fx:id="specialty_request_col1" prefWidth="75.0" styleClass="col" text="Спеціальність" />
+                              <TableColumn fx:id="specialty_request_col2" prefWidth="75.0" styleClass="col" text="Освітній рівень" />
+                              <TableColumn fx:id="specialty_request_col3" prefWidth="75.0" styleClass="col" text="Форма навчання" />
+                              <TableColumn fx:id="specialty_request_col4" prefWidth="75.0" styleClass="col" text="Вид пропозиції" />
+                              <TableColumn fx:id="specialty_request_col5" prefWidth="75.0" styleClass="col" text="Вступ на основі" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <Button fx:id="request_btn" layoutX="379.0" layoutY="439.0" mnemonicParsing="false" onAction="#request_click" text="Заявки" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="entrant_info" prefHeight="510.0" prefWidth="573.0" style="-fx-background-color: #F9EDCC;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane fx:id="data_entrant_panel" layoutX="14.0" layoutY="14.0" prefHeight="147.0" prefWidth="780.0" style="-fx-border-color: #000; -fx-border-radius: 20;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+                           <children>
+                              <ImageView fx:id="entrant_img" fitHeight="127.0" fitWidth="136.0" layoutX="559.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="9.0">
+                                 <image>
+                                    <Image url="images/image-user-non.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="last_name1" layoutX="26.0" layoutY="17.0" text="Прізвище" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="17.0" />
+                              <Label fx:id="name1" layoutX="225.0" layoutY="17.0" text="Ім’я" AnchorPane.leftAnchor="225.0" AnchorPane.topAnchor="17.0" />
+                              <Label fx:id="birthday" layoutX="26.0" layoutY="71.0" text="Дата народження" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="71.0" />
+                              <Label fx:id="sex" layoutX="375.0" layoutY="17.0" text="Стать" AnchorPane.leftAnchor="375.0" AnchorPane.topAnchor="17.0" />
+                              <Label fx:id="phone" layoutX="225.0" layoutY="71.0" text="Контактний телефон" AnchorPane.leftAnchor="225.0" AnchorPane.topAnchor="71.0" />
+                              <Label fx:id="last_name_data" layoutX="21.0" layoutY="45.0" prefHeight="17.0" prefWidth="173.0" />
+                              <Label fx:id="name_data" layoutX="226.0" layoutY="45.0" prefHeight="17.0" prefWidth="136.0" />
+                              <Label fx:id="sex_data" layoutX="376.0" layoutY="45.0" prefHeight="17.0" prefWidth="125.0" />
+                              <Label fx:id="birthday_data" layoutX="21.0" layoutY="101.0" prefHeight="17.0" prefWidth="173.0" />
+                              <Label fx:id="phone_data" layoutX="226.0" layoutY="101.0" prefHeight="17.0" prefWidth="173.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="document_panel" layoutX="15.0" layoutY="175.0" prefHeight="95.0" prefWidth="780.0" style="-fx-border-color: #000; -fx-border-radius: 20;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                           <children>
+                              <Label fx:id="series" layoutX="24.0" layoutY="14.0" text="Серія" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="14.0" />
+                              <Button fx:id="document_file" layoutX="22.0" layoutY="42.0" mnemonicParsing="false" onAction="#document_file_click" prefHeight="25.0" prefWidth="304.0" text="Файл не завантажений" AnchorPane.leftAnchor="21.0" />
+                              <Label fx:id="number" layoutX="195.0" layoutY="17.0" text="Номер" AnchorPane.topAnchor="14.0" />
+                              <Label fx:id="series_data" layoutX="68.0" layoutY="16.0" prefHeight="17.0" prefWidth="115.0" AnchorPane.topAnchor="14.0" />
+                              <Label fx:id="number_data" layoutX="258.0" layoutY="15.0" prefHeight="17.0" prefWidth="181.0" AnchorPane.topAnchor="14.0" />
+                              <Label fx:id="rating" layoutX="463.0" layoutY="17.0" text="Середній бал" />
+                              <Label fx:id="rating_data" layoutX="564.0" layoutY="18.0" prefHeight="17.0" prefWidth="115.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="zno_panel" layoutX="15.0" layoutY="281.0" prefHeight="166.0" prefWidth="780.0" style="-fx-border-color: #000; -fx-border-radius: 20;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                           <children>
+                              <TableView fx:id="zno_data" layoutX="22.0" layoutY="14.0" prefHeight="141.0" prefWidth="738.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="13.0">
+                                 <columns>
+                                    <TableColumn fx:id="zno_col1" prefWidth="75.0" styleClass="col" text="Рік" />
+                                    <TableColumn fx:id="zno_col2" prefWidth="75.0" styleClass="col" text="Сертифікат" />
+                                    <TableColumn fx:id="zno_col3" prefWidth="75.0" styleClass="col" text="Предмет" />
+                                    <TableColumn fx:id="zno_col4" prefWidth="75.0" styleClass="col" text="Пінкод" />
+                                    <TableColumn fx:id="zno_col5" prefWidth="75.0" styleClass="col" text="Бал" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <Button fx:id="back6" layoutX="379.0" layoutY="454.0" mnemonicParsing="false" onAction="#back6_click" text="Назад" />
+                     </children>
+                  </AnchorPane>
+                       <AnchorPane fx:id="tab1" layoutX="10.0" prefHeight="510.0" prefWidth="573.0" style="-fx-background-color: #FFF5B2;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TableView fx:id="data_specialty" layoutX="15.0" layoutY="27.0" prefHeight="382.0" prefWidth="780.0" style="-fx-background-color: transparent;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="27.0">
+                          <columns>
+                                <TableColumn fx:id="specialty_col1" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" styleClass="col" text="Код" />
+                                <TableColumn fx:id="specialty_col2" prefWidth="75.0" styleClass="col" text="Спеціальність" />
+                                <TableColumn fx:id="specialty_col3" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" styleClass="col" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <GridPane layoutX="15.0" layoutY="428.0" maxHeight="40.0" minHeight="40.0" prefHeight="40.0" prefWidth="780.0">
+                          <columnConstraints>
+                            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button fx:id="add_specialty" mnemonicParsing="false" onAction="#add_specialty_click" text="Додати" GridPane.columnIndex="2" />
+                              <Button fx:id="specialty_delete" mnemonicParsing="false" onAction="#specialty_delete_click" text="Видалити" />
+                           </children>
+                        </GridPane>
+                     </children>
+                       </AnchorPane>
+                  <AnchorPane fx:id="tab4" prefHeight="500.0" prefWidth="810.0" style="-fx-background-color: #FFEFD3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TableView fx:id="user_request" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="770.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="98.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="20.0">
+                            <columns>
+                                  <TableColumn fx:id="user_col1" prefWidth="75.0" styleClass="col" text="Прізвище" />
+                                  <TableColumn fx:id="user_col2" prefWidth="75.0" styleClass="col" text="Ім’я" />
+                                  <TableColumn fx:id="user_col3" prefWidth="75.0" styleClass="col" text="Стать" />
+                                  <TableColumn fx:id="user_col4" prefWidth="75.0" styleClass="col" text="Телефон" />
+                            </columns>
+                            <columnResizePolicy>
+                                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                            </columnResizePolicy>
+                        </TableView>
+                        <GridPane fx:id="request_grid" layoutX="103.0" layoutY="396.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button fx:id="back5" mnemonicParsing="false" onAction="#back5_click" text="Назад" />
+                              <Button fx:id="look_user" mnemonicParsing="false" onAction="#look_user_click" text="Переглянути" GridPane.columnIndex="1" />
+                              <Button fx:id="reject" mnemonicParsing="false" onAction="#reject_click" text="Відхилити" GridPane.columnIndex="2" />
+                              <Button fx:id="confirm" mnemonicParsing="false" onAction="#confirm_click" text="Підтвердити" GridPane.columnIndex="3" />
+                              <Button fx:id="export" mnemonicParsing="false" onAction="#export_click" text="Експортувати" GridPane.columnIndex="2" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+              
+                    </children>
+                 </AnchorPane>
+                 <AnchorPane fx:id="panel_menu_items" maxWidth="200.0" minWidth="55" prefHeight="510.0" prefWidth="200.0" style="-fx-background-color: #F0F7FF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                       <AnchorPane layoutY="1.0" prefHeight="500.0" prefWidth="55.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <effect>
+                             <DropShadow />
+                          </effect>
+                          <children>
+                             <Button fx:id="menu_open" layoutX="7.0" layoutY="6.0" mnemonicParsing="false" onAction="#menu_open_click" prefHeight="34.0" prefWidth="41.0">
+                                <graphic>
+                                   <FontAwesomeIconView fx:id="menu_open_icon" fill="#1a598d" glyphName="CLOSE" size="25" />
+                                </graphic>
+                             </Button>
+                          </children>
+                       </AnchorPane>
+                       <FontAwesomeIconView fill="#1a598d" glyphName="SIGN_OUT" layoutX="16.0" layoutY="487.0" rotate="180.0" size="30" wrappingWidth="25.142862230539322" AnchorPane.bottomAnchor="8.0" />
+                       <FontAwesomeIconView fill="#1a598d" glyphName="MORTAR_BOARD" layoutX="11.0" layoutY="227.0" size="30" wrappingWidth="34.14287430047989" />
+                       <FontAwesomeIconView fill="#1a598d" glyphName="SEND" layoutX="11.0" layoutY="274.0" size="30" wrappingWidth="34.14287430047989" />
+                  <FontAwesomeIconView fill="#1a598d" glyphName="CHECK" layoutX="10.0" layoutY="321.0" size="30" wrappingWidth="34.14287430047989" />
+                        <Button fx:id="specialty_tab" graphicTextGap="20.0" layoutY="193.0" mnemonicParsing="false" onAction="#menu_tab_click" prefHeight="47.0" prefWidth="200.0" text="Спеціальності" />
+                        <Button fx:id="request_tab" graphicTextGap="20.0" layoutY="240.0" mnemonicParsing="false" onAction="#menu_tab_click" prefHeight="47.0" prefWidth="200.0" text="Заявки" />
+                        <Button fx:id="logout" graphicTextGap="20.0" layoutY="453.0" mnemonicParsing="false" onAction="#logout_click" prefHeight="47.0" prefWidth="200.0" text="Вийти" AnchorPane.bottomAnchor="0.0" />
+                        <Button fx:id="confirm_tab" graphicTextGap="20.0" layoutY="287.0" mnemonicParsing="false" onAction="#menu_tab_click" prefHeight="47.0" prefWidth="200.0" text="Прийняті" />
+                    </children>
+                    <effect>
+                       <DropShadow />
+                    </effect>
+                 </AnchorPane>
+            <Label fx:id="last_name" alignment="CENTER" layoutX="55.0" layoutY="16.0" prefHeight="17.0" prefWidth="145.0" text="" />
+            <Label fx:id="name" alignment="CENTER" layoutX="55.0" layoutY="39.0" prefHeight="17.0" prefWidth="145.0" text="" />
+           </children>
+       </AnchorPane>  
+   </children>
+</AnchorPane>

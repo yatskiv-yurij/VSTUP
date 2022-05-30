@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="VSTUP.jnlp">
+  <information>
+    <title>VSTUP</title>
+    <vendor>Admin</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="VSTUP.jar" size="208855" download="eager" />
+    <jar href="lib\SparseBitSet-1.2.jar" size="24510" download="eager" />
+    <jar href="lib\activation.jar" size="56290" download="eager" />
+    <jar href="lib\commons-codec-1.15.jar" size="353793" download="eager" />
+    <jar href="lib\commons-collections4-4.4.jar" size="751914" download="eager" />
+    <jar href="lib\commons-io-2.11.0.jar" size="327135" download="eager" />
+    <jar href="lib\commons-math3-3.6.1.jar" size="2213560" download="eager" />
+    <jar href="lib\fontawesomefx-8.9.jar" size="571068" download="eager" />
+    <jar href="lib\javax.mail-1.6.2.jar" size="659031" download="eager" />
+    <jar href="lib\jfoenix-17.0.2.jar" size="2434175" download="eager" />
+    <jar href="lib\log4j-api-2.14.1.jar" size="300365" download="eager" />
+    <jar href="lib\log4j-core-2.14.1.jar" size="1745700" download="eager" />
+    <jar href="lib\mysql-connector-java-8.0.19.jar" size="2356711" download="eager" />
+    <jar href="lib\poi-5.1.0.jar" size="2908627" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="vstup.VSTUP"  name="VSTUP" />
+  <update check="always"/>
+</jnlp>
